@@ -14,7 +14,7 @@ namespace GameSix
         // Constructor
         public Foe(string name)
         {
-            this.name = name;
+            SetName(name);
             health = 100;
             shield = 0;
         }
@@ -22,6 +22,24 @@ namespace GameSix
         public string GetName()
         {
             return name;
+        }
+
+        public float GetHealth()
+        {
+            return health;
+        }
+
+        public float GetShield()
+        {
+            return shield;
+        }
+
+        public void SetName(string name)
+        {
+            // Get the name without initial and final spaces
+            name = name.Trim();
+            // Set the name
+            this.name = name;
         }
 
         public void TakeDamage(float damage)
