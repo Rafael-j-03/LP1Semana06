@@ -11,12 +11,15 @@ namespace GameSix
         private float health;
         private float shield;
 
+        private static int numberOfPowerUps;
+
         // Constructor
         public Foe(string name)
         {
             SetName(name);
             health = 100;
             shield = 0;
+            numberOfPowerUps = 0;
         }
 
         public string GetName()
@@ -66,6 +69,13 @@ namespace GameSix
                 shield += amount;
                 if (shield > 100) shield = 100;
             }
+
+            numberOfPowerUps++;
+        }
+
+        public static int GetNumberOfPowerUps()
+        {
+            return numberOfPowerUps;
         }
     }
 }
