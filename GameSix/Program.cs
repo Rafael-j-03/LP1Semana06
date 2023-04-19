@@ -20,6 +20,12 @@ namespace GameSix
                 string name = Console.ReadLine();
                 foes[i] = new Foe(name);
             }
+
+            // Print all foes's names
+            for (int i = 0; i < numberOfFoes; i++)
+            {
+                Console.WriteLine("Foe " + (i + 1) + ": " + foes[i].GetName());
+            }
         }
     }
 }
