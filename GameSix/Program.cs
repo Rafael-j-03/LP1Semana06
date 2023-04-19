@@ -12,6 +12,14 @@ namespace GameSix
 
             // Store the foes in an array
             Foe[] foes = new Foe[numberOfFoes];
+
+            // Ask the user for the name of each foe
+            for (int i = 0; i < numberOfFoes; i++)
+            {
+                Console.Write("Name of foe " + (i + 1) + ": ");
+                string name = Console.ReadLine();
+                foes[i] = new Foe(name);
+            }
         }
     }
 }
