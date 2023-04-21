@@ -7,13 +7,11 @@ namespace GameSixFriday
 {
     public class GameLevel
     {
-        private int numRooms;
         private Difficulty difficulty;
         Foe[] roomFoes;
         
         public GameLevel(int numRooms, Difficulty difficulty)
         {
-            this.numRooms = numRooms;
             this.difficulty = difficulty;
             roomFoes = new Foe[numRooms];
         }
@@ -30,17 +28,12 @@ namespace GameSixFriday
 
         public int GetNumRooms()
         {
-            return numRooms;
+            return roomFoes.Length;
         }
 
         public int GetNumFoes()
         {
-            int numFoes = 0;
-            for (int i = 0; i < roomFoes.Length; i++)
-            {
-                if (roomFoes[i] != null) numFoes++;
-            }
-            return numFoes;
+            return roomFoes.Count(foe => foe != null);
         }
 
         public void PrintFoes()
