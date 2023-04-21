@@ -32,5 +32,15 @@ namespace GameSixFriday
         {
             return numRooms;
         }
+
+        public int GetNumFoes()
+        {
+            int numFoes = 0;
+            for (int i = 0; i < roomFoes.Length; i++)
+            {
+                if (roomFoes[i] != null) numFoes++;
+            }
+            return numFoes;
+        }
     }
 }
