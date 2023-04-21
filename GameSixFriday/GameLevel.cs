@@ -42,5 +42,16 @@ namespace GameSixFriday
             }
             return numFoes;
         }
+
+        public void PrintFoes()
+        {
+            for (int i = 0; i < roomFoes.Length; i++)
+            {
+                if (roomFoes[i] != null)
+                {
+                    Console.WriteLine($"Room {i + 1}: {roomFoes[i].GetName()}");
+                }
+            }
+        }
     }
 }
