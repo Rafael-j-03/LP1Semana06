@@ -27,5 +27,10 @@ namespace GameSixFriday
         {
             return difficulty;
         }
+
+        public int GetNumRooms()
+        {
+            return numRooms;
+        }
     }
 }
