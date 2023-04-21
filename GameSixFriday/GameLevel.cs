@@ -9,17 +9,23 @@ namespace GameSixFriday
     {
         private int numRooms;
         private Difficulty difficulty;
-        Foe[] foes;
+        Foe[] roomFoes;
         
         public GameLevel(int numRooms, Difficulty difficulty)
         {
             this.numRooms = numRooms;
             this.difficulty = difficulty;
+            roomFoes = new Foe[numRooms];
         }
 
         public void SetFoeInRoom(int room, Foe foe)
         {
-            foes[room] = foe;
+            roomFoes[room - 1] = foe;
+        }
+
+        public Difficulty GetDifficulty()
+        {
+            return difficulty;
         }
     }
 }
